@@ -1,12 +1,12 @@
-﻿
-namespace Server
+﻿using System;
+
+namespace SocketChannels
 {
     class Program
     {
         static void Main(string[] args)
         {
-            MUD mud = new MUD();
-            mud.Start();
+            Console.WriteLine("Hello World!");
         }
     }
 }

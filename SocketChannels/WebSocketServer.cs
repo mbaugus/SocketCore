@@ -38,10 +38,6 @@ namespace Connection
 
         public WebSocketServer(ChannelGroupSettings channelsettings = null)
         {
-            foreach (var item in collection)
-            {
-
-            }
             if(channelsettings == null)
             {
                 GroupSettings = new ChannelGroupSettings();

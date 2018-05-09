@@ -28,15 +28,14 @@ namespace Server
             settings.MakeChannel(new Channel(1024, "fileschannel", ChannelPriority.HIGH, ChannelMessageTypes.BINARY));
             settings.MakeChannel(new Channel(1024, "jsonchannel", ChannelPriority.HIGH, ChannelMessageTypes.JSON));
 
-        
             Connection.WebSocketServer wss = new Connection.WebSocketServer(settings);
 
             wss.LostConnection += new MessageEventHandler(this.OnClosedConnection);
             wss.NewConnection += new MessageEventHandler(this.OnNewConnection);
             wss.ClientMessageReceived += new MessageEventHandler(this.OnNewMessage);
-
-            wss.Start("http://localhost:8080/MUD/");
-
+            
+            //wss.Start("http://localhost:8080/MUD/");
+            wss.Start("http://159.89.227.216:8080/MUD/");
             /*
             JSONMessage message = new JSONMessage();
             message.Message = "Hey";
